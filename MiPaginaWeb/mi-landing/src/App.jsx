@@ -5,6 +5,7 @@ import Home from '../pages/Home'
 import AboutMe from '../pages/AboutMe'
 import Proyects from '../pages/Projects'
 import Contact from '../pages/Contact'
+import Footer from '../src/components/Footer'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path='/proyects' element={<Proyects />} /> 
         <Route path='/contact' element={<Contact />} /> 
       </Routes>
+      <Footer></Footer>
       </>
   )
 }
