@@ -10,6 +10,17 @@
     colorCycle 8s linear infinite;
 }
 
+
+.subtitle {
+  font-size: 15rem;
+  color: #888;
+  margin-top: 1rem;
+}
+.subtitle:hover {
+  color: #ff008c;
+  text-decoration: underline;
+}
+
 /* Animación de “flotación” vertical */
 @keyframes float {
   0%   { transform: translateY(0); }

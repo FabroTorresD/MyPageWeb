@@ -32,6 +32,7 @@ export const HomePage = () => {
         <>
             <div className="home-page">
                 <FloatingTitle text="Hello, I'm Fabrizio" />
+                <h1 className='subtitle'>Web Developer</h1>
                 <p>This is the home page of my portfolio website.</p>
                 <p>Here you can find information about my projects, skills, and experience.</p>
             </div>
