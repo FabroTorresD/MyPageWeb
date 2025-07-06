@@ -1,0 +1,43 @@
+/* src/components/FloatingTitle.module.css */
+
+.title {
+  display: inline-block;       
+  font-size: 6rem;             
+  font-weight: bold;
+  text-align: center;
+  animation: 
+    float 1s ease-in-out infinite,
+    colorCycle 8s linear infinite;
+}
+
+
+.subtitle {
+  font-size: 15rem;
+  color: #888;
+  margin-top: 1rem;
+}
+.subtitle:hover {
+  color: #ff008c;
+  text-decoration: underline;
+}
+
+/* Animación de “flotación” vertical */
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Ciclo de colores */
+@keyframes colorCycle {
+  0%   { color: #ff008c; }
+  10%  { color: #a01963; }
+  15%  { color: #ff008c; }
+  20%  { color: #ff008c; }
+  25%  { color: #d309e1; }
+  50%  { color: #9c1aff; }
+  75%  { color: #7700ff; }
+  85%  { color: #00ff48; }
+  100% { color: #ff008c; }
+
+}

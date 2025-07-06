@@ -1,0 +1,47 @@
+/* src/components/Badge.module.css */
+
+.badge {
+  width: 60px;
+  height: 60px;
+  background-color: #080303;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.badge:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Override inherited text color */
+  color: #7f1a91;
+}
+
+/* Container para BadgeContainer */
+.badgeContainer {
+  display: flex;
+  gap: 1rem; /* Espacio horizontal entre badges */
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Si quieres un fondo distinto al blanco, puedes usar una variante:
+.badgeSecondary {
+  background-color: #eef3fe;
+}
+*/
+
+
+
