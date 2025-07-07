@@ -7,6 +7,8 @@ import Skills from '../components/Skills'
 import styles from '../components/Badge.module.css'
 import About from '../components/About'
 import CurrentStatus from '../components/CurrentStatus'
+import DownloadBadge from '../components/DowloandBadge'
+import ContactCard from '../components/ContactCard'
 
 export const HomePage = () => {
   // Lista de skills y texto de “what I’m learning”
@@ -28,23 +30,6 @@ export const HomePage = () => {
   const learningText =
     'Currently diving deep into cloud architecture, microservices y patrones avanzados de React.'
 
-  const handleBadgeClick = (platform) => {
-    let url = ''
-    switch (platform) {
-      case 'github':
-        url = 'https://github.com/FabroTorresD'
-        break
-      case 'linkedin':
-        url = 'https://linkedin.com/in/Fabrizio-Torres-Daniele'
-        break
-      case 'email':
-        url = 'mailto:fabrotorres3@gmail.com'
-        break
-      default:
-        break
-    }
-    if (url) window.open(url)
-  }
 
   return (
     <>
@@ -57,16 +42,16 @@ export const HomePage = () => {
         <p>Here you can find information about my projects, skills, and experience.</p>
       </div>
 
-      <div className={styles.badgeContainer}>
-        <Badge icon={<FaGithub size={20} />} onClick={() => handleBadgeClick('github')} />
-        <Badge icon={<FaLinkedin size={20} />} onClick={() => handleBadgeClick('linkedin')} />
-        <Badge icon={<FaEnvelope size={20} />} onClick={() => handleBadgeClick('email')} />
-      </div>
 
+      <ContactCard></ContactCard>
+
+      <DownloadBadge />
+      
       <About></About>
       <CurrentStatus year={4} major="Systems Engineering" status="Looking for opportunities" />
 
       <Skills skills={mySkills} learningText={learningText} />
+
     </>
   )
 }

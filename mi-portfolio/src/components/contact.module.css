@@ -1,0 +1,173 @@
+/* src/components/Contact/contact.module.css */
+
+.section {
+  position: relative;
+  padding: 5rem 0;
+}
+
+.bgShapes { /* igual que antes */ }
+.shapeCircle { /* igual que antes */ }
+.shapeSquare { /* igual que antes */ }
+
+@keyframes float { /* igual que antes */ }
+
+.content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+.header {
+  max-width: 40rem;
+  margin: 0 auto 3rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.gradientText {
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: #fff;
+}
+
+/* ----- CTA Card ----- */
+.card {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  transition: background 0.3s ease, filter 0.3s ease;
+}
+.card:hover {
+  background: rgba(255,255,255,0.1);
+  filter: hue-rotate(60deg) saturate(1.2);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.cardIcon {
+  width: 2rem;
+  height: 2rem;
+  color: #fff;
+}
+
+.cardTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.cardText {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: 1px solid #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, filter 0.3s ease;
+}
+.ctaButton:hover {
+  background: rgba(255,255,255,0.15);
+  filter: hue-rotate(-60deg) saturate(1.5);
+}
+
+.ctaMailIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #fff;
+}
+
+/* ----- Social Links ----- */
+.socialGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1.5rem;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  transition: background 0.3s ease, filter 0.3s ease;
+}
+
+.socialLink:hover {
+  background: rgba(255,255,255,0.1);
+  filter: hue-rotate(120deg) brightness(1.2);
+}
+
+.iconWrapper {
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, filter 0.3s ease;
+}
+
+.socialLink:hover .iconWrapper {
+  background: rgba(255,255,255,0.1);
+  filter: hue-rotate(120deg) brightness(1.2);
+}
+
+.socialIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #fff;
+}
+
+.linkInfo {
+  text-align: left;
+}
+
+.linkName {
+  font-weight: 600;
+  color: #fff;
+}
+
+.linkLabel {
+  font-size: 0.875rem;
+  color: #fff;
+}
+
+/* Opcional: quita filtros en hover de iconos específicos */
+.emailHover:hover .socialIcon,
+.githubHover:hover .socialIcon,
+.linkedinHover:hover .socialIcon {
+  filter: none;
+}

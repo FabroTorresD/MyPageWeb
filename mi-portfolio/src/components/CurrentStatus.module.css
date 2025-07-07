@@ -7,60 +7,61 @@
   --cs-highlight: #34d399;
 }
 
+/* Contenedor estilo “card” */
 .container {
-  margin: 1rem auto 2rem;    /* top 1rem, bottom 2rem */
-  padding: 1rem 2rem;        /* top/bottom 1rem, left/right 2rem */
-   background: rgba(30, 30, 30, 0.85);
-   border: 1px solid rgba(255, 255, 255, 0.1);
-   border-radius: 16px;
-   backdrop-filter: blur(8px);
+  margin: 1rem auto 2rem;
+  padding: 1rem 2rem;
+  max-width: 800px;
+
+  background: transparent;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 16px;
+
+  transition: background 0.3s ease, filter 0.3s ease;
+}
+.container:hover {
+  background: rgba(255,255,255,0.1);
+  filter: hue-rotate(60deg) saturate(1.2);
 }
 
-
+/* Header con icono y título */
 .header {
   display: flex;
   align-items: center;
   gap: 2rem;
-  margin-bottom: 1rem;
-  margin-top: 0%;
+  margin: 0 0 1rem;
 }
-
 .icon {
   font-size: 2.8rem;
   color: var(--cs-highlight);
-  margin: 0;                           
 }
-
 .title {
   font-size: 1.75rem;
   font-weight: 600;
   color: var(--cs-value);
-  margin: 0;                            
 }
 
+/* Grid de filas */
 .grid {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-
 .row {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .label {
   color: var(--cs-label);
   font-size: 1rem;
 }
-
 .value {
   color: var(--cs-value);
   font-weight: 500;
   font-size: 1rem;
 }
-
 .valueHighlight {
   color: var(--cs-highlight);
   font-weight: 600;
