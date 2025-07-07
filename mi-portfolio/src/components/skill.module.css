@@ -1,0 +1,79 @@
+/* src/components/Skills/skill.module.css */
+
+/* Variables de colores (puedes ajustarlos en tu global.css) */
+:root {
+  --color-primary: #7c3aed;
+  --color-accent: #ec4899;
+  --color-muted: #e5e7eb;
+}
+
+/* Contenedor principal de la sección Skills */
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: rgba(30, 30, 30, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(8px);
+}
+
+/* Encabezado con icono y título */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+.header .icon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-accent);
+}
+.title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 10px;
+}
+
+/* Grid para las tarjetas de skills */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Cada tarjeta de skill */
+.skillCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+.skillCard:hover {
+  transform: scale(1.10);
+}
+
+/* Sección “What I'm Learning” */
+.learningSection {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+}
+.learningTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+.learningText {
+  color: var(--color-muted);
+  line-height: 1.6;
+}

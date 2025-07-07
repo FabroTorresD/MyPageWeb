@@ -1,0 +1,24 @@
+/* src/components/About/about.module.css */
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: rgba(30, 30, 30, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(8px);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-align: left ;
+}
+
+.text {
+  color: #e5e7eb;
+  line-height: 1.6;
+}

@@ -5,13 +5,56 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  /* quitamos background-color estático */
+  /* background-color: #554b86; */
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* ==== ANIMACIÓN DE DEGRADADO ==== */
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(
+    270deg,
+    #554b86,
+    #ff6ec4,
+    #42e695,
+    #554b86
+  );
+  background-size: 800% 800%;
+  animation: gradientShift 20s ease infinite;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0%   50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0%   50%; }
+}
+
+/* ==== PATRÓN SUTIL EN MOVIMIENTO ==== */
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 200%; height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: movePattern 30s linear infinite;
+  z-index: -1;
+}
+
+@keyframes movePattern {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-40px, -40px, 0); }
+}
+
 
 a {
   font-weight: 500;
