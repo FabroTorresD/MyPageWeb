@@ -1,0 +1,12 @@
+# Ignorar dependencias instaladas y artefactos
+node_modules
+dist
+
+# Ignorar control de versiones y archivos locales
+.git
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
