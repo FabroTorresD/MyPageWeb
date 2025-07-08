@@ -4,13 +4,14 @@ import FloatingTitle from '../components/FloatingTitle'
 import Badge from '../components/Badge'
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 import Skills from '../components/Skills'
-import styles from '../components/Badge.module.css'
 import About from '../components/About'
 import CurrentStatus from '../components/CurrentStatus'
 import DownloadBadge from '../components/DowloandBadge'
 import ContactCard from '../components/ContactCard'
+import FloatingCode from '../components/FloatingCode'
 
 export const HomePage = () => {
+
   // Lista de skills y texto de “what I’m learning”
   const mySkills = [
     'JavaScript',
@@ -42,12 +43,13 @@ export const HomePage = () => {
         <p>Here you can find information about my projects, skills, and experience.</p>
       </div>
 
+      <FloatingCode />
 
-      <ContactCard></ContactCard>
+      <ContactCard />
 
       <DownloadBadge />
-      
-      <About></About>
+
+      <About />
       <CurrentStatus year={4} major="Systems Engineering" status="Looking for opportunities" />
 
       <Skills skills={mySkills} learningText={learningText} />
