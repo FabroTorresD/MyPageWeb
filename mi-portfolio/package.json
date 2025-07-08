@@ -1,13 +1,14 @@
 {
   "name": "mi-portfolio",
-  "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "4.6.1"
   },
   "dependencies": {
     "lucide-react": "^0.525.0",
