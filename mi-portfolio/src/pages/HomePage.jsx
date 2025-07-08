@@ -24,8 +24,6 @@ export const HomePage = () => {
     'PostgreSQL',
     'Designer Patterns',
     'Postman',
-    'Git',
-    'CI/CD',
   ]
 
   const learningText =
