@@ -1,8 +1,6 @@
 {
   "name": "mi-portfolio",
   "version": "0.0.0",
-  "engines": { "node": "20.19.x" },
-
   "scripts": {
     "dev": "vite",
     "build": "vite build",
