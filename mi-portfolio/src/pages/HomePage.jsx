@@ -9,6 +9,7 @@ import CurrentStatus from '../components/CurrentStatus'
 import DownloadBadge from '../components/DowloandBadge'
 import ContactCard from '../components/ContactCard'
 import FloatingCode from '../components/FloatingCode'
+import AnimatedSubtitle from '../styles/AnimatedSubtitle'
 
 export const HomePage = () => {
 
@@ -32,11 +33,12 @@ export const HomePage = () => {
 
   return (
     <>
+      <FloatingTitle text="Hello, I'm Fabrizio" />
+      <AnimatedSubtitle text="Systems Engineering Student" />
 
       <div className="home-page">
 
-        <FloatingTitle text="Hello, I'm Fabrizio" />
-        <h1 className="subtitle">Systems Engineering Student</h1>
+
         <p>This is the home page of my portfolio website.</p>
         <p>Here you can find information about my projects, skills, and experience.</p>
       </div>
