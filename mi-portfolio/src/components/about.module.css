@@ -42,3 +42,11 @@
   /* un poco de espaciado arriba para respirar */
   margin-top: 1rem;
 }
+
+.text2 {
+  color: #ffffff;       /* párrafo en blanco */
+  line-height: 1.6;
+  font-size: 1rem;
+  /* un poco de espaciado arriba para respirar */
+  margin-top: 1rem;
+}

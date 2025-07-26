@@ -1,7 +1,7 @@
 // src/components/About/About.jsx
 import React from 'react'
 import { FaUserCircle } from 'react-icons/fa'
-import styles from './About.module.css'
+import styles from './about.module.css'
 
 export default function About() {
     return (
