@@ -10,6 +10,7 @@ import DownloadBadge from '../components/DowloandBadge'
 import ContactCard from '../components/ContactCard'
 import FloatingCode from '../components/FloatingCode'
 import AnimatedSubtitle from '../styles/AnimatedSubtitle'
+import '../App.css';
 
 export const HomePage = () => {
 
@@ -33,9 +34,10 @@ export const HomePage = () => {
 
   return (
     <>
-      <FloatingTitle text="Hello, I'm Fabrizio" />
-      <AnimatedSubtitle text="Systems Engineering Student" />
-
+      <section className="hero-container">
+        <FloatingTitle text="Hello, I'm Fabrizio" />
+        <AnimatedSubtitle text="Systems Engineering Student" />
+      </section>
       <div className="home-page">
 
 

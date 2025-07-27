@@ -40,3 +40,13 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.hero-container {
+  display: flex;
+  flex-direction: column;   /* apila verticalmente */
+  align-items: center;      /* centra horizontal */
+  text-align: center;       /* centra el texto interno */
+  gap: 0.5rem;              /* espacio entre título y subtítulo */
+  padding: 2rem 1rem;       /* opcional, para dar espacio arriba/abajo */
+}
