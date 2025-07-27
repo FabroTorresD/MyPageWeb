@@ -9,34 +9,43 @@ const containerVariants = {
     opacity: 1,
     transition: {
       staggerChildren: 0.05,
-      when: "beforeChildren"
-    }
-  }
+      when: 'beforeChildren',
+    },
+  },
 };
 
 // Variantes para cada carácter
 const charVariants = {
-  hidden: { opacity: 0, y: `0.25em` },
+  hidden: { opacity: 0, y: '0.25em' },
   visible: {
     opacity: 1,
-    y: `0em`,
+    y: '0em',
     transition: {
-      duration: 0.3
-    }
-  }
+      duration: 0.3,
+    },
+  },
 };
 
-export default function AnimatedSubtitle({ text, className }) {
+// Estilos inline para el subtitle adaptativo
+const subtitleStyle = {
+  fontSize: 'clamp(1.25rem, 5vw, 2rem)', // mínimo, ideal y máximo
+  margin: 0,
+  lineHeight: 1.2,
+  textAlign: 'center',
+  display: 'inline-block',
+  overflow: 'hidden',
+};
+
+export default function AnimatedSubtitle({ text }) {
   return (
     <motion.h1
-      className={className}
+      style={subtitleStyle}
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      style={{ display: 'inline-block', overflow: 'hidden' }}
     >
-      {text.split('').map((char, index) => (
-        <motion.span key={index} variants={charVariants}>
+      {text.split('').map((char, idx) => (
+        <motion.span key={idx} variants={charVariants}>
           {char === ' ' ? '\u00A0' : char}
         </motion.span>
       ))}
