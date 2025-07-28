@@ -11,10 +11,16 @@
 
 @keyframes float { /* igual que antes */ }
 
+/* === Contenedor principal centrado y con ancho máximo === */
 .content {
   position: relative;
   z-index: 10;
   text-align: center;
+
+  /* Ajustes para centrar y limitar ancho */
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 .header {
@@ -106,8 +112,10 @@
 /* ----- Social Links ----- */
 .socialGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  /* Cada card entre 240px y 1fr, tantas columnas como entren */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
+  justify-items: stretch;
 }
 
 .socialLink {
@@ -116,12 +124,14 @@
   gap: 1rem;
   background: transparent;
   border: 1px solid rgba(255,255,255,0.3);
-  padding: 1rem;
+  padding: 1.25rem;           /* más “aire” interno */
   border-radius: 0.75rem;
   text-decoration: none;
   transition: background 0.3s ease, filter 0.3s ease;
-}
 
+  width: 100%;                /* ocupa todo el ancho de su celda */
+  box-sizing: border-box;
+}
 .socialLink:hover {
   background: rgba(255,255,255,0.1);
   filter: hue-rotate(120deg) brightness(1.2);
@@ -139,7 +149,6 @@
   justify-content: center;
   transition: background 0.3s ease, filter 0.3s ease;
 }
-
 .socialLink:hover .iconWrapper {
   background: rgba(255,255,255,0.1);
   filter: hue-rotate(120deg) brightness(1.2);
@@ -152,6 +161,9 @@
 }
 
 .linkInfo {
+  /* para que el flex interno permita encogerse correctamente */
+  flex: 1;
+  min-width: 0;
   text-align: left;
 }
 
@@ -163,11 +175,23 @@
 .linkLabel {
   font-size: 0.875rem;
   color: #fff;
+  /* cortes de línea lógicos en texto largo */
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  line-height: 1.4;
 }
 
-/* Opcional: quita filtros en hover de iconos específicos */
+/* Quita filtros en hover de iconos específicos */
 .emailHover:hover .socialIcon,
 .githubHover:hover .socialIcon,
 .linkedinHover:hover .socialIcon {
   filter: none;
+}
+
+/* ----- Responsive: en pantallas muy pequeñas usar una sola columna ----- */
+@media (max-width: 480px) {
+  .socialGrid {
+    grid-template-columns: 1fr;
+  }
 }
