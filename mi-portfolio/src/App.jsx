@@ -1,34 +1,27 @@
-// src/App.jsx
 import { useEffect, useState } from 'react'
-import { Routes, Route } from 'react-router-dom'
-import Loader from './components/Loader'
+import TechIntro from './components/TechIntro'
 import { HomePage } from './pages/HomePage'
 import './App.css'
 
 function App() {
-  const [loading, setLoading] = useState(true)
-  const [fadeOut, setFadeOut] = useState(false)
+  const [showIntro, setShowIntro] = useState(true)
+  const [introClosing, setIntroClosing] = useState(false)
 
   useEffect(() => {
-    // 2.8s: activa fade-out
-    const fadeTimer = setTimeout(() => setFadeOut(true), 2800)
-    // 3s: oculta loader
-    const endTimer  = setTimeout(() => setLoading(false), 3000)
+    const closeTimer = window.setTimeout(() => setIntroClosing(true), 1120)
+    const hideTimer = window.setTimeout(() => setShowIntro(false), 1460)
 
     return () => {
-      clearTimeout(fadeTimer)
-      clearTimeout(endTimer)
+      window.clearTimeout(closeTimer)
+      window.clearTimeout(hideTimer)
     }
   }, [])
 
-  if (loading) {
-    return <Loader fadeOut={fadeOut} />
-  }
-
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-    </Routes>
+    <div className="app-root">
+      <HomePage />
+      {showIntro ? <TechIntro isLeaving={introClosing} /> : null}
+    </div>
   )
 }
 
